@@ -32,9 +32,9 @@
   --nav-color: #0d447f;  /* The default color of the main navmenu links */
   --nav-hover-color: #c5834e; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #0d447f; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #c5834e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-courses-background-color: #ffffff; /* Used as the background color for courses items that appear when hovering over primary navigation items */
+  --nav-courses-color: #0d447f; /* Used for navigation links of the courses items in the navigation menu. */
+  --nav-courses-hover-color: #c5834e; /* Similar to --nav-hover-color, this color is applied to courses navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -269,10 +269,10 @@ h6 {
     color: var(--nav-hover-color);
   }
 
-  .navmenu .dropdown ul {
+  .navmenu .courses ul {
     margin: 0;
     padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
+    background: var(--nav-courses-background-color);
     display: block;
     position: absolute;
     visibility: hidden;
@@ -285,40 +285,40 @@ h6 {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
 
-  .navmenu .dropdown ul li {
+  .navmenu .courses ul li {
     min-width: 200px;
   }
 
-  .navmenu .dropdown ul a {
+  .navmenu .courses ul a {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
-    color: var(--nav-dropdown-color);
+    color: var(--nav-courses-color);
   }
 
-  .navmenu .dropdown ul a i {
+  .navmenu .courses ul a i {
     font-size: 12px;
   }
 
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
+  .navmenu .courses ul a:hover,
+  .navmenu .courses ul .active:hover,
+  .navmenu .courses ul li:hover>a {
+    color: var(--nav-courses-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .courses:hover>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
   }
 
-  .navmenu .dropdown .dropdown ul {
+  .navmenu .courses .courses ul {
     top: 0;
     left: -90%;
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .courses .courses:hover>ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -359,7 +359,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-dropdown-color);
+    color: var(--nav-courses-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
     font-size: 17px;
@@ -395,7 +395,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    color: var(--nav-courses-hover-color);
   }
 
   .navmenu .active i,
@@ -405,23 +405,23 @@ h6 {
     transform: rotate(180deg);
   }
 
-  .navmenu .dropdown ul {
+  .navmenu .courses ul {
     position: static;
     display: none;
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
+    background-color: var(--nav-courses-background-color);
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: none;
     transition: all 0.5s ease-in-out;
   }
 
-  .navmenu .dropdown ul ul {
+  .navmenu .courses ul ul {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .courses>.courses-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -453,16 +453,16 @@ h6 {
   }
 }
 
-/* Listing Dropdown - Desktop */
+/* Listing courses - Desktop */
 @media (min-width: 1200px) {
-  .navmenu .listing-dropdown {
+  .navmenu .listing-courses {
     position: static;
   }
 
-  .navmenu .listing-dropdown ul {
+  .navmenu .listing-courses ul {
     margin: 0;
     padding: 10px;
-    background: var(--nav-dropdown-background-color);
+    background: var(--nav-courses-background-color);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 130%;
@@ -476,51 +476,51 @@ h6 {
     z-index: 99;
   }
 
-  .navmenu .listing-dropdown ul li {
+  .navmenu .listing-courses ul li {
     flex: 1;
   }
 
-  .navmenu .listing-dropdown ul li a,
-  .navmenu .listing-dropdown ul li:hover>a {
+  .navmenu .listing-courses ul li a,
+  .navmenu .listing-courses ul li:hover>a {
     padding: 10px 20px;
     font-size: 15px;
-    color: var(--nav-dropdown-color);
-    background-color: var(--nav-dropdown-background-color);
+    color: var(--nav-courses-color);
+    background-color: var(--nav-courses-background-color);
   }
 
-  .navmenu .listing-dropdown ul li a:hover,
-  .navmenu .listing-dropdown ul li .active,
-  .navmenu .listing-dropdown ul li .active:hover {
-    color: var(--nav-dropdown-hover-color);
-    background-color: var(--nav-dropdown-background-color);
+  .navmenu .listing-courses ul li a:hover,
+  .navmenu .listing-courses ul li .active,
+  .navmenu .listing-courses ul li .active:hover {
+    color: var(--nav-courses-hover-color);
+    background-color: var(--nav-courses-background-color);
   }
 
-  .navmenu .listing-dropdown:hover>ul {
+  .navmenu .listing-courses:hover>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
   }
 }
 
-/* Listing Dropdown - Mobile */
+/* Listing courses - Mobile */
 @media (max-width: 1199px) {
-  .navmenu .listing-dropdown ul {
+  .navmenu .listing-courses ul {
     position: static;
     display: none;
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
+    background-color: var(--nav-courses-background-color);
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: none;
     transition: all 0.5s ease-in-out;
   }
 
-  .navmenu .listing-dropdown ul ul {
+  .navmenu .listing-courses ul ul {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .listing-dropdown>.dropdown-active {
+  .navmenu .listing-courses>.courses-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -834,7 +834,7 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 80px 0 60px 0;
+  padding: 80px 0 0 0;
   display: flex;
   align-items: center;
   background: url(../img/hero-bg.png) top center no-repeat;

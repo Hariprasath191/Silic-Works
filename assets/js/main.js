@@ -49,13 +49,13 @@
   });
 
   /**
-   * Toggle mobile nav dropdowns
+   * Toggle mobile nav coursess
    */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
+  document.querySelectorAll('.navmenu .toggle-courses').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+      this.parentNode.nextElementSibling.classList.toggle('courses-active');
       e.stopImmediatePropagation();
     });
   });
