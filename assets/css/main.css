@@ -1032,6 +1032,7 @@ section,
 }
 
 
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -1132,7 +1133,9 @@ section,
   transition: 0.3s;
   border-radius: 5px;
 }
-
+.services .service-item ul{
+  text-align: left;
+}
 .services .service-item .icon {
   font-size: 36px;
   padding: 20px 20px;
