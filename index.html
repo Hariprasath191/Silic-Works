@@ -519,7 +519,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="https://formspree.io/f/xjgeabkq" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -576,10 +576,10 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Blogs</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="comingsoon.html">Blogs</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#values">Services</a></li>
 
           </ul>
         </div>
@@ -587,10 +587,10 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Careers</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Products</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Courses</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">F.A.Q</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="comingsoon.html">Careers</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Products</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="comingsoon.html">Courses</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#faq">F.A.Q</a></li>
           </ul>
         </div>
 
@@ -625,13 +625,37 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  if (response.ok) {
+    alert("Message sent successfully!");
+    form.reset();
+  } else {
+    alert("Something went wrong. Please try again.");
+  }
+});
+</script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
